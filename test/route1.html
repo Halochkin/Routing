@@ -1,0 +1,12 @@
+<script type="module">
+
+  import {HashDotsRouter} from "../src/HashDot.js";
+
+  const router = new HashDotsRouter();
+  window.addEventListener("routechange", e => console.log(e.detail));
+</script>
+
+<a href="#red">Red</a>
+<a href="#green">Green</a>
+<a href="#blue">Blue</a>
+<hash-comp></hash-comp>
