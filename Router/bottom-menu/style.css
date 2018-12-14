@@ -1,0 +1,174 @@
+
+view-element {
+    height: 89vh;
+    width: 100vw;
+    background: lightgoldenrodyellow;
+    margin-top: 11vh;
+    display: block;
+    grid-area: content;
+    position: fixed;
+}
+
+view-element > a {
+    color: #036dff;
+}
+
+li > a {
+    color: black;
+
+}
+li{
+    font-size: 3vh;
+}
+chapters-list>a{
+    color: #cc0066;
+}
+#place{
+    height: 90vh;
+    width: 90vw;
+    background-color: white;
+    margin: auto;
+}
+bottom-menu {
+    height: 11vh;
+    width: 100vw;
+    background: #4c5f6f;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.1fr 1fr;
+    grid-template-areas: "title icon2 icon3 icon4";
+    overflow: hidden;
+    position: fixed;
+    grid-area: navigation;
+}
+
+body {
+    margin: 0;
+    display: grid;
+    grid-template-rows: 11vh 89vh;
+    grid-template-areas: "navigation" "content";
+}
+
+img {
+    display: inline-block;
+    margin-top: 2vh;
+    height: 6vh;
+    width: auto;
+    width: auto;
+    position: fixed;
+
+}
+
+a {
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    width: 23vw;
+    font-size: 1.5vw;
+    text-align: center;
+    grid-area: title;
+    line-height: 5vh;
+    position: fixed;
+}
+
+bottom-btn > a {
+    color: white;
+    width: auto;
+    margin-left: 5vw;
+    font-size: 2vw;
+    text-align: center;
+    grid-area: title;
+    line-height: 11vh;
+    position: fixed;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+bottom-btn[active] > img {
+    transform: scale(1.5);
+}
+
+bottom-btn[active] > a {
+    transform: scale(1.1);
+    font-size: 3.2vw;
+}
+
+bottom-btn > span {
+    margin-top: 2vw;
+    line-height: 5vw;
+    position: absolute;
+}
+
+#title {
+    grid-area: title;
+    color: white;
+}
+
+#icon1 {
+    grid-area: icon1;
+    display: none;
+}
+
+#icon2 {
+    grid-area: icon2;
+}
+
+#icon3 {
+    grid-area: icon3;
+}
+
+#icon4 {
+    grid-area: icon4;
+}
+
+@media screen and (max-width: 800px) {
+    bottom-menu {
+        height: 10vh;
+        width: 100vw;
+        background: #4c5f6f;
+        position: initial;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "icon1 icon2 icon3 icon4";
+        overflow: hidden;
+        grid-area: navigation;
+    }
+
+    view-element {
+        height: 90vh;
+        width: 100vw;
+        background: lightgoldenrodyellow;
+        display: block;
+        margin-top: 0;
+        grid-area: content;
+    }
+
+    img {
+        display: inline-block;
+        margin-left: 7.5vw;
+        margin-top: 2.3vh;
+        height: 10vw;
+        width: 10vw;
+        align-items: center;
+        /*background-color: #3a3a3a;*/
+    }
+
+    #title {
+        display: none;
+    }
+
+    #icon1 {
+        display: block;
+    }
+
+    a {
+        display: none;
+    }
+
+    bottom-btn[active] > img {
+        transform: scale(1.5);
+    }
+
+    body {
+        grid-template-rows: 90vh 10vh;
+        width: 100vw;
+        grid-template-areas: "content" "navigation";
+    }
+}

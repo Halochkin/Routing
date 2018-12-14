@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+<div id="demo">
+    <a id="one" href="https://developer.mozilla.org/ru/docs/Web/API/Event/stopPropagation">stopPropagation</a><br>
+</div>
+<a id="two" href="https://developer.mozilla.org/ru/docs/Web/API/Event/preventDefault">preventDeafault()</a><br>
+
+<script>
+
+
+
+  document.querySelector("#one").addEventListener("click", (e) => {
+    e.stopPropagation();
+    console.log(e.cancelBubble);
+  });
+  document.querySelector("#two").addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log(e.cancelBubble);
+  });
+
+  document.querySelector("div").addEventListener("click", (e) => {
+    document.querySelector("div").style.backgroundColor = "yellow";
+  });
+
+
+</script>
+</body>
+</html>
